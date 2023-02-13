@@ -1,0 +1,163 @@
+ид регионов:
+834 - 834
+835 - 909
+836 - 910
+837 - 911
+838 - 912
+839 - 913
+
+в /history/general/generic_advisors.txt можно поубирать лишних дефолтных советников
+
+следующий незанятый id для лидеров: 684
+
+изменения в файлах других стран:
+/common/countries/colors - изменены цвета Болгарии, Польши, Украины, Дона, Кубани, CRI
+/common/countries/cosmetic - цвет russian_empire сделан таким же, как у SOV_PROVISIONAL, добавлены свои косметические теги
+common/national_focus/soviet - убраны украинские провинции из SOV_improve_the_stalin_line и SOV_the_molotov_line
+			     - SOV_claims_on_poland и SOV_demand_eastern_poland - добавлены другие условия для Западной Украины (89, 91, 93)
+			     - SOV_claim_on_bessarabia и SOV_the_fate_of_romania - добавлены условия available
+				 - SOV_behead_the_snake - добавлено условие доступности NOT = { has_global_flag = trotsky_came_back_in_ukraine } 
+				 - в SOV_our_slavic_commitments, SOV_panslavic_nationalism и SOV_the_rightful_heir_to_the_empire добавлена Украина
+				 - добавлен SOV_request_ukrainian_help как взаимоисключение с помощью от Японии, а также фокус SOV_crimean_front
+				 - в SOV_dismantle_the_zemsky_sobor и SOV_the_third_rome добавлено условие доступности (чтобы монархическая марионетка не уходила не туда)
+common/national_focus/poland - добавлены фокусы shared_focus в начало, POL_invite_Ukraine, POL_unified_headquarters и POL_intermarium_science, POL_war_with_ukraine, POL_war_with_ukraine_pavel, POL_alliance_with_crimea и POL_invite_crimea, изменён эффект в POL_baltic_alliance_focus и вообще эта подветка Междуморья изменена 
+				 - в POL_sea_to_sea, POL_claim_greater_lithuania и POL_greater_commonwealth добавлен регион 909 (Кропивницкий) вместе с 203, в два последних также добавлен 910 (Стародуб) вместе с 224,  в POL_greater_commonwealth и POL_sea_to_sea также добавлен 913 регион (Степной Крым) после 137
+				 - в POL_sea_to_sea убран последний регион (Балта)
+ 				 - в POL_demand_slovakia, POL_support_monarchy_in_CZE и POL_demand_slovakia_pavel добавлен регион 911 (Пряшевщина) вместе с 71-м
+				 - POL_align_with_habsburgs переделан, чтобы затрагивать и монархическую Украину
+				 - в POL_plan_east добавлено в эффект условие для Украины
+				 - в POL_fortification_of_ukraine и POL_supply_the_rail_nexus регион 93 заменён на 914 (Ровно)
+				 - в POL_greater_polish_SSR убраны западноукраинские регионы
+common/national_focus/italy - добавлен модификатор ИИ в ITA_greece_war_goal #пока Италия неактуальна вся
+			    - добавлено в условие пропуска BUL = { is_in_faction = yes } в ITA_bulgaria_friend 
+common/national_focus/france - добавлены фокусы FRA_invite_ukraine, FRA_technology_sharing и FRA_european_union, в целом ветка малой Антанты расширена
+common/national_focus/germany - добавлены GER_war_with_ukraine, GER_pressure_on_ukraine, GER_support_the_ukraine и GER_ukrainian_membership
+			      - в GER_align_romania изменено условие пропуска (bypass)
+				  - в GER_anti_comitern_pact добавлено условие в выборку стран NOT = { tag = DKR }
+				  - в GER_the_central_powers добавлена Украина в число приглашаемых
+				  - в GER_second_vienna_award добавлено условие пропуска ROM = { has_war_with = GER }
+common/national_focus/romania - в ROM_demand_transnistria совок заменён Украиной
+				добавлен ROM_non_aggression_ukraine
+				добавлено приглашение Украины в ROM_the_cordon_sanitaire
+common/national_focus/yugoslavia - добавлен YUG_invite_ukraine, а в YUG_pan_slavic_workers_congress добавлено условие в результат выполнения
+common/national_focus/czechoslovakia - убран вообще CZE_the_romanian_question, также из планов удалён он в файле CZE_alternate_strategy_plan
+				     - добавлен CZE_invite_ukraine
+				     - в CZE_an_entente_of_our_own добавляется нацдух add_ideas = CZE_death_before_surrender
+common/national_focus/hungary       - HUN_claim_galicia переделан в союз с монархической Украиной, старая часть его содержимого перенесена в HUN_claim_the_bucovina, добавлен также HUN_invite_ukraine
+									- в HUN_proclaim_the_restoration_of_austria_hungary добавлены корки для 911 (Пряшевщина) вместе с 71
+common/national_focus/japan - добавлен JAP_demand_far_east
+common/national_focus/turkey - добавлены TUR_demand_osman_crimea, TUR_partnership_pact_with_ukraine и TUR_invite_ukraine
+common/national_focus/bulgaria - добавлена ветвь BUL_ally_across_sea, ветви BUL_the_fate_of_the_balkans и BUL_join_the_tripartite_pact сдвинуты вправо, как и некоторые другие фокусы выше, а BUL_consolidate_dominance_of_the_seas перенесён в конец файла
+common/national_focus/mexico - в MEX_focus_communist_revolution в условие назначения лидером Троцкого добавлено ограничение NOT = { has_global_flag = trotsky_came_back_in_ukraine }
+common/national_focus/lithuania - в LIT_proclaim_greater_lithuania, LIT_claim_greater_lithuania и LIT_greater_commonwealth добавлен регион 909 (Кропивницкий) вместе с 203, 914 (Ровно) вместе с 93, 910 (Стародуб) вместе с 224 (этот также в LIT_restore_greater_lithuania), в LIT_greater_commonwealth также добален после 137 регион 913 (Степной Крым), в LIT_restore_order также добален 914 (Ровно) вместе с 93
+common/ideas/SOV - заблокированы через always = no черноморский и севастопольский морские заводы
+events/Germany  - закомментированы западноукраинские регионы, а также Буковина, Буджак и Бессарабия в germany.11 и следующих ивентах по ПМР
+		- в germany.46.a добавлено выделение CUA и модификатор ИИ для гарантий Украины
+		- в germany.55 и germany.56 добавлены варианты для CUA  
+		- в germany.86.a добавлен modifier для демократической Украины, в 86 и 87 ивентах также передача ЗУ вместе с Данцигом для Мельника
+		- в ивентах 55 56 57 80 81 добавлен регион 911 вместе с 71-м
+events/WTT_Germany - в wtt_germany.71 добавлены корки для Пряшевщины вместе с 71-м и 73-м регионами
+events/DOD_Hungary - в DOD_hungary.101 добавлены варианты для CUA, в ивентах 13 101 105 106 127 128 129 добавлен регион 911 вместе с 71-м
+events/SovietUnion - в soviet.17 убраны три последние (украинские) регионы
+events/NSB_Soviet - в NSB_soviet_civil_war_common.001.a убран регион 192, убраны переименования Донецка в  NSB_soviet_civil_war_common.010, а в переименованих Сталинграда добавлено 217 = { set_state_flag = UKR_stalingrad_is_renamed }, в NSB_soviet_nationalist.000 изменены условия для KAZ
+events/Romania - добавлено условие is_in_faction_with = UKR в romania.2 и romania.3
+events/DOD_Romania - добавлен вариант DOD_romania.40.c
+		   - в DOD_romania.114 добавлено выделение CUA
+		   - в 113 и 114 добавлен регион 911 вместе с 71-м
+events/Poland  - в poland.2 и poland.3 добавлены условия для западноукраинских регионов и модификатор для ИИ, в ивенты со 2-го по 7-й добавлен регион 914 (Ровно) вместе с 93
+events/NSB_Poland - в NSB_poland_events.1 и NSB_poland_events.101 добавлен регион 911 (Пряшевщина) вместе с 71
+				  - в pavel_events.2 изменения в регионах Кубани и прочих деталях
+				  - в POL_habsburg_events.2 добавлено создание фракции
+				  - в NSB_poland_communist_events.4, NSB_poland_communist_events.401, NSB_poland_communist_events.6, NSB_poland_communist_events.601 и NSB_polish_fascist_events.1 убраны западноукраинские регионы
+events/NSB_Lithuania - убраны регионы 89, 91 и 93
+events/Finland - добавлено NOT = { has_idea = UKR_intervention_in_sov_civ_war } в finland.2
+events/Italy - добавлен выбор italy.3.c
+events/Mexico - добавлено условие по флагу trotsky_came_back_in_ukraine в триггер mexico.17
+events/DOD_Czechoslovakia - добавлено отделение CUA в czech.14, а также добавлен регион 911 вместе с 71-м
+events/Baltic - в baltic.5 добавлены условия срабатывания в триггер
+events/BFTB_Turkey - в bftb_turkey.21.b для ИИ добавлено в модификатор правило для османов
+events/ElectionEvents.txt - во всех ивентах в триггеры где есть ограничение на США до 49 года добавлена и Украина
+history/countries/SOV - Soviet union - закомментированы add_state_claim = 78, 80, 766, 89, 91 и 93 (для 1939 года)
+		      - убраны генералы Тимошенко и Москаленко, теоретик Королёв, Каганович, Ковпак, Шкуро и Краснов
+			  - название варианта крейсера "Chervona Ukraina Class" замененено на "Krasni Kavkaz Class"
+/common/characters/SOV - Сталину добавлена роль советника для Украины, добавлено условие UKR = { UKR_nikita_khrushchev = { is_country_leader = no } } для Хрущёва, добавлена доступность для Украины персонажей Вознесенского, Калинина, Литвинова, Молотова, изменена видимость персонажей Нечаева, Космина, Родзянко
+					   - для Троцкого изменены действия в секции on_add
+/common/characters/POL - сделаны доступными и для Украины на случай РПТН персонажи: POL_jozef_haller, POL_jozef_unrug, POL_stanislav_maczek, POL_stanislaw_pawluc и POL_eugeniusz_kwiatkowiski
+/common/decisions/SOV - убрано SOV_concessions_germany_ukraininan_oil_SCW, SOV_align_states_ukraine_csw, SOV_ukraine_crackdown_timer, "unlock_decision_tooltip = SOV_scorched_earth_ukraine", SOV_scorched_earth_ukraine, SOV_plan_start_of_uprising_odessa, все "state = 202 #KIEV"
+/common/decisions/POL - добавлен в конец form_commonwealth_for_poland_category
+					  - в POL_add_state_to_strike добавлен регион Закерзонье (834)
+					  - в POL_sideline_the_left и POL_sideline_the_right добавлен модификатор ИИ для Междуморья
+					  - в POL_peasants_strike и POL_add_state_to_strike добавлен регион Ровно (914)
+common/decisions/formable_nation_decisions - добавлено NOT = { has_country_flag = UKR_united_with_poland } в условие видимости для польско-литовской унии, туда же добавле 914 регион (Ровно), в form_austria_hungary добавлена Пряшевщина (911), ещё в несколько решений добавлен Северный Крым (913) вместе с 137
+/common/decisions/categories/00_decision_categories - в political_actions добавлено ограничение visible для махновцев 
+common/game_rules - добавлены правила для УД и двух Крымов, правило INTERMARIUM для Польши, BUL_UKRAINE_ALLY для Болгарии, изменены правила Румынии, добавлены правила раздробленности Польши и ЧС, правила allow_create_faction и allow_join_faction
+common/ai_strategy_plans/HUN_alternate - добавлен фокус HUN_claim_galicia в первый план
+/common/intelligence_agencies/00_intelligence_agencies.txt - добавлены дополнительные агентства
+/common/scripted_triggers/00_scripted_triggers - изменён исторический путь для Румынии ROM_is_on_historical_plan_trigger 
+/common/scripted_triggers/diplomacy_scripted_triggers.txt - добавлен NOT = { tag = DKR } в DIPLOMACY_SEND_VOLUNTEERS_ENABLE_TRIGGER в трёх местах вместе с SPC
+		- добавлены тригеры DIPLOMACY_CREATE_FACTION_ENABLE_TRIGGER, DIPLOMACY_OFFER_JOIN_FACTION_ENABLE_TRIGGER и DIPLOMACY_JOIN_FACTION_ENABLE_TRIGGER
+/common/scripted_triggers/SOV_scripted_triggers - убрано has_active_mission = SOV_ukraine_crackdown_timer
+/common/scripted_effects/GER_scripted_effects - убраны регионы 89, 91, и 93 в MR_pact_transfer_state_effect и MR_pact_transfer_faction_state_effect
+/common/scripted_effects/POL_scripted_effects - в POL_basic_form_commonwealth добавлен регион 914 (Ровно) вместе с 93
+/map/rocketsites   - изменены провинции местонахождения ракетных площадок для Одессы, Мозыря, Восточной Словакии и Кропивницкого
+/map/adjacency_rules - добавлено правило для керченского пролива, изменены условия доступности is_friend для Босфор и Дарданелл
+localisation/00_events_l_russian - изменено описание для news.33, остальное всё нужно переносить при обнове без изменений из events_l_russian ванили
+localisation/bookmarks_l_russian - изменено описание для обоих польских сценариев, добавлены описания Украины и Крыма
+/common/on_actions/ukrainianstate_on_actions.txt - не забывать при обновление ID Пряшевщины обновлять
+/common/ideologies/00_ideologies - добавлена подидеология ukr_int_nationalism к фашистам
+/history/general/generic_advisors - кроме того, что на отдельных позициях убраны или добавлены свои теги, в конце ещё добавлены советники для Закарпатья
+/occupation_laws/occupation_laws - добавлен закон local_anarchy_commune. Для него также добавлена 14-й иконка в /gfx/interface/occupation/occupation_policy_icon_strip.dds, что также прописано в /interface/ukrainianstate_countryoccupationview, при патчах игры смотреть, не добавили ли разрабы новые законы
+
+Описание в мастерской:
+[img]https://i.imgur.com/fVVaDCS.gif[/img]
+
+[b]Ukraine Above All[/b] (former Ukrainian State / бывшая "Украинская держава") 
+Release [b]2.0[/b] "State of Courage"
+
+Localisations / Локализации:
+[list]
+[*] English — almost complete
+[*] Русский — полная
+[/list]
+[img]https://i.ibb.co/3pzv2hC/ukr-bar4.png[/img]
+Alternative-historical mode, adding to play independent Ukraine with P. Skoropadsky as leader in 1936 year. 
+
+Features:
+[list]
+[*] historical parties, leaders and commanders with portraits;
+[*] added hundreds national focuses, 800 events, 300 decisions, dozens of national spirits, advisors and manufacturers for Ukrainian State;
+[*] integration with other countries: added focuses for USSR, Third Reich, France, Yugoslavia, Czechoslovakia, Romania, Hungaria, Poland, Japan, Bulgaria and Turkey, changed realisation of Molotov–Ribbentrop Pact;
+[*] new southern neighbor with focus tree — White Crimea under the leadership of Wrangel, and also in Crimea, you can create a Crimean Tatar state with its own focuses, events and decisions;
+[*] added new regions and other details on map.
+[*] worked out many Ukrainian ethnic lands (Western Ukraine, Kuban, Transcarpathia, Green Ukraine).
+[/list]
+[img]https://i.ibb.co/mhFTBGT/ukr-bar5.png[/img]
+Альтернативно-исторический мод, добавляющий в игру независимую Украину под руководством Павла Скоропадского в 1936 году. Украинская держава сохранилась и отстояла независимость от Советской России в 1917-1920 гг. и теперь ситуация в регионе выглядит совсем иначе. Перед игроком будет стоять выбор, куда дальше двигать Украину: провести социалистические преобразования и примириться с СССР, стать оплотом демократии в Восточной Европе, пойти в альянс к Польше, сохранить власть гетмана и создать собственный оборонный альянс из нейтральных стран региона, вернуть к жизни анархические идеалы Махно, либо же привести к власти националистов и заняться агрессивным собиранием всех украинских земель.
+
+Особенности мода:
+[list]
+[*] исторические партии, лидеры и военачальники с портретами;
+[*] множество путей развития истории, для чего в игру добавлено дерево национальных фокусов Украины с примерно 180 элементами, десятки национальных духов и конструкторских бюро, три сотни исторических персонажей, около 800 новых событий и 300 решений;
+[*] интеграция с другими государствами: добавлены фокусы СССР, Третьему Рейху, Франции, Польше, Югославии, Чехословакии, Венгрии, Румынии, Японии, Болгарии и Турции, переделана реализация пакта Молотова-Риббентропа;
+[*] также кроме Украины добавлен независимый Крым, где после поражения в гражданской войне укрываются белогвардейцы во главе с Врангелем, а также в Крыму можно создать крымскотатарское государство. У всех крымских фракций есть свои фокусы, решения и события; 
+[*] добавлены новые регионы и некоторые более мелкие детали карты, заменены советские топонимы городов и регионов;
+[*] проработаны многие украинские этнические земли за пределами изначальной территории (Западная Украина, Закарпатье, Кубань, Зелёный Клин), для них также добавлены свои небольшие деревья фокусов.
+[/list]
+  [img]https://i.ibb.co/89qfdYh/ukr-bar1.png[/img]
+[list]
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2801202284]Ukraine Above All: Extended content[/url]: GFX/music submod / музыкально-графический сабмод
+[*] [url=https://steamcommunity.com/sharedfiles/filedetails/?id=2878934890]White Ruthenia[/url]: Independent Belarus submod / Сабмод на независимую Беларусь
+[*] [url=https://drive.google.com/open?id=1gm2B4jO9BpLm_zh3iw4w7Al0rvrv2jDe]Test branch / Тестовая версия[/url]
+[/list]
+  [img]https://i.ibb.co/h8PfzqR/ukr-bar2.png[/img]
+[list]
+[*] [url=https://docs.google.com/document/d/1WnqPWds3H6tH1R3c6bYXCdNGHjHiyEexyo2RTOB1YuY/edit?usp=sharing]F.A.Q.[/url] (RUS)
+[*] Обсуждение мода на Стратегиуме: [url=https://www.strategium.ru/forum/topic/85431-ukraine-above-all/?do=getNewComment]Ukraine Above All[/url] (RUS)
+[/list]
+  [img]https://i.ibb.co/7GqLPDd/ukr-bar3.png[/img]
+[list]
+[*][url=https://steamcommunity.com/profiles/76561198029832086]GBV[/url] — глава проекта по всем вопросам
+[*][url=https://steamcommunity.com/id/ddeadgignac]gignac[/url], [url=https://steamcommunity.com/profiles/76561198067901332]Vardi[/url], [url=https://steamcommunity.com/id/SASniyPersik]PersikOFF[/url], [url=https://steamcommunity.com/profiles/76561198909985605]yaner|[/url] — основной графический вклад
+[*][url=https://steamcommunity.com/id/Anniall]200 iq?﻿[/url] — особая благодарность за финансовую поддержку мода
+[*]и многие другие, нерегулярно принимавшие конструктивное участие в разработке.
+[/list]
